@@ -44,6 +44,6 @@ def extract_frames(video_path, output_dir):
     return extracted_frames
 
 # Usage
-video_path = 'movement_direction/data/idle/video_21.avi'
-output_dir = 'movement_direction/extracted_frames'
+video_path = 'interaction/data/chop/video_306.avi'
+output_dir = 'interaction/extracted_frames'
 frames = extract_frames(video_path, output_dir)

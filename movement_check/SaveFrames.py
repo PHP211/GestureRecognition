@@ -3,7 +3,7 @@ import os
 
 # Đường dẫn đến video
 video_path = "./movement_check/output_video_other.avi"
-output_folder = "./movement_check/frames_other"  # Thư mục để lưu frames
+output_folder = "./movement_check/frames_test"  # Thư mục để lưu frames
 
 # Tạo thư mục nếu chưa tồn tại
 if not os.path.exists(output_folder):
