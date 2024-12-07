@@ -50,25 +50,25 @@ def normalize_keypoints(keypoints):
     
     normalized_keypoints = np.array(normalized_keypoints)
     
-    x_min, y_min = np.min(normalized_keypoints, axis=0)
-    x_max, y_max = np.max(normalized_keypoints, axis=0)
+    # x_min, y_min = np.min(normalized_keypoints, axis=0)
+    # x_max, y_max = np.max(normalized_keypoints, axis=0)
     
-    if (x_max - x_min) == 0:
-        print("Cảnh báo: Tọa độ x không thay đổi, bỏ qua chuẩn hóa x.")
-        x_min, x_max = 0, 1  # Cứ để giá trị x giữ nguyên, hoặc chọn giá trị mặc định
-    if (y_max - y_min) == 0:
-        print("Cảnh báo: Tọa độ y không thay đổi, bỏ qua chuẩn hóa y.")
-        y_min, y_max = 0, 1  # Cứ để giá trị y giữ nguyên, hoặc chọn giá trị mặc định
+    # if (x_max - x_min) == 0:
+    #     print("Cảnh báo: Tọa độ x không thay đổi, bỏ qua chuẩn hóa x.")
+    #     x_min, x_max = 0, 1  # Cứ để giá trị x giữ nguyên, hoặc chọn giá trị mặc định
+    # if (y_max - y_min) == 0:
+    #     print("Cảnh báo: Tọa độ y không thay đổi, bỏ qua chuẩn hóa y.")
+    #     y_min, y_max = 0, 1  # Cứ để giá trị y giữ nguyên, hoặc chọn giá trị mặc định
     
-    min_vals = np.array([x_min, y_min])
-    max_vals = np.array([x_max, y_max])
+    # min_vals = np.array([x_min, y_min])
+    # max_vals = np.array([x_max, y_max])
     
-    normalized_keypoints = (normalized_keypoints - min_vals) / (max_vals - min_vals)
+    # normalized_keypoints = (normalized_keypoints - min_vals) / (max_vals - min_vals)
     
     return normalized_keypoints
 
 def save_keypoints(action, videoCounter, keypoints):
-    npy_dir = os.path.join('interaction/data_npy', action)
+    npy_dir = os.path.join('interaction/new_data_npy', action)
     os.makedirs(npy_dir, exist_ok=True)  # Tạo thư mục nếu chưa tồn tại
     
     # Lưu keypoints vào tệp .npy

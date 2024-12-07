@@ -20,7 +20,7 @@ def mediapipe_detection(image, model):
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)  # Chuyển đổi lại từ RGB sang BGR
     return image, results
 
-action = 'chop'
+action = 'idle'
 
 # Tạo thư mục data/right nếu chưa tồn tại
 output_dir = f"interaction/data/{action}"
@@ -45,7 +45,7 @@ frame_width = 640
 frame_height = 480
 fps = 30.0  # Frames per second
 duration = 1  # Độ dài mỗi video (giây)
-no_sequences = 20  # Số lượng video cần ghi lại
+no_sequences = 100  # Số lượng video cần ghi lại
 
 # Mở webcam
 cap = cv2.VideoCapture(0)
